@@ -1,0 +1,16 @@
+.menu {
+  padding: 50px 30px 30px 30px;
+}
+
+.menu li {
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.menu li:last-child {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.active {
+  font-weight: var(--font-weight-bold);
+}

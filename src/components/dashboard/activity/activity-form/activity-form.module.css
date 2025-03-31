@@ -1,0 +1,11 @@
+#activityForm {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#activityForm > svg {
+  position: absolute;
+  top: 50%;
+}

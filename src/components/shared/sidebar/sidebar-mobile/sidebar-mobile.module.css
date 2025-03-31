@@ -1,0 +1,33 @@
+.sidebarMobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: 5;
+  background-color: var(--color-primary);
+  animation: slideIn 0.3s;
+}
+
+.sidebarMobile > div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background-color: var(--color-secondary);
+  padding: 30px;
+}
+
+.greeting {
+  font-size: var(--font-heading-3);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-top: 40px;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,32 @@
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+#nav > a > svg {
+  height: 41px;
+}
+
+#nav > div {
+  display: flex;
+  gap: 20px;
+}
+
+.bgBackground {
+  background: var(--color-background);
+}
+
+.bgPrimary {
+  background: var(--color-primary);
+}
+
+.logo {
+  fill: red;
+}
+
+@media (width < 834px) {
+  #nav > a > svg {
+    width: 63px;
+  }
+}

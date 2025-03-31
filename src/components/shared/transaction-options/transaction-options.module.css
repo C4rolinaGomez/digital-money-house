@@ -1,0 +1,29 @@
+.transactionOptions {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.transactionOptions > div {
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  gap: 20px;
+}
+
+.transactionOptions > div > a {
+  width: 100%;
+}
+
+@media (width <= 1440px) {
+  .transactionOptions > div {
+    width: 100%;
+  }
+}
+
+@media (width < 834px) {
+  .transactionOptions > div {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+}

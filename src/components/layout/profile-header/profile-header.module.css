@@ -1,0 +1,38 @@
+#profileHeader {
+  display: flex;
+  flex-direction: row;
+}
+
+.name {
+  background-color: var(--color-primary);
+  color: var(--color-black);
+  padding: 5px;
+  border-radius: var(--border-radius);
+  font-size: var(--font-heading-2);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.greeting {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+}
+
+.menu {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-primary);
+}
+
+@media (width < 834px) {
+  .greeting {
+    display: none;
+  }
+}

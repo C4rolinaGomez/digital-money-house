@@ -1,0 +1,15 @@
+.actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  align-self: end;
+  width: 233px;
+}
+
+@media (width <= 834px) {
+  .button {
+    width: 100%;
+  }
+}

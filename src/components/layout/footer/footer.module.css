@@ -1,0 +1,18 @@
+.copyright {
+  padding: 20px;
+}
+
+.bgSecondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+.bgBackground {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+}
+
+@media (width < 834px) {
+  #footer > div {
+    text-align: center;
+  }
+}

@@ -1,0 +1,34 @@
+.addCardButtonSimple,
+.addCardButtonForm {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.addCardButtonSimple {
+  align-items: center;
+  cursor: pointer;
+}
+
+.addCardButtonForm > div {
+  flex: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.title {
+  flex: 1;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-heading-2);
+  line-height: 117%;
+}
+
+@media (width < 834px) {
+  .addCardButtonForm {
+    flex-direction: column;
+  }
+}

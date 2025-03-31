@@ -1,0 +1,30 @@
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.action > svg {
+  cursor: pointer;
+}
+
+.label {
+  font-size: var(--font-heading-3);
+  color: var(--color-white);
+}
+
+.value {
+  font-size: var(--font-heading-2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+}
+
+.highlight {
+  color: var(--color-primary);
+}

@@ -1,0 +1,42 @@
+#registerSuccess {
+  margin: 0 auto;
+  max-width: 530px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 180px 20px 20px 20px;
+}
+
+#registerSuccess > h2 {
+  font-size: 64px;
+  line-height: 140%;
+  color: #ffffff;
+  font-weight: var(--font-weight-semibold);
+}
+
+#registerSuccess > svg {
+  width: 92px;
+}
+
+#registerSuccess > span {
+  font-size: 15px;
+  line-height: 140%;
+  color: #ffffff;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+@media (width < 834px) {
+  #registerSuccess {
+    padding: 180px 40px 40px 40px;
+  }
+
+  #registerSuccess > h2 {
+    font-size: 34px;
+  }
+
+  #registerSuccess > svg {
+    width: 101px;
+  }
+}

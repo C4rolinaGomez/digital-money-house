@@ -1,0 +1,7 @@
+.addCard > p {
+  font-size: var(--font-heading-3);
+  line-height: 138%;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 30px;
+  color: var(--color-white);
+}

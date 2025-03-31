@@ -1,0 +1,48 @@
+#servicePaymentForm {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#servicePaymentForm > p {
+  color: var(--color-primary);
+  font-style: normal;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-heading-2);
+  line-height: 117%;
+}
+
+.input {
+  width: 310px;
+}
+
+.button {
+  align-self: end;
+  width: 233px;
+}
+
+#servicePaymentForm > svg {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.buttonMobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.buttonMobile > button {
+  flex: 0.5;
+  align-self: self-end;
+}
+
+@media (width <= 1440px) {
+  .input,
+  .button {
+    width: 100%;
+  }
+}

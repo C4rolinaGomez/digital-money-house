@@ -1,0 +1,24 @@
+.small {
+  font-size: 15px;
+  line-height: 140%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.invalid {
+  font-style: italic;
+  color: #da0000;
+}
+
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+
+@media (width <= 1440px) {
+  .small {
+    font-size: 13.7px;
+  }
+}

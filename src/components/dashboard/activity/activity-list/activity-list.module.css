@@ -1,0 +1,11 @@
+.viewAll {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  font-weight: var(--font-weight-semibold);
+  padding-top: 15px;
+}
+
+.viewAll > div:first-child {
+  flex: auto;
+}

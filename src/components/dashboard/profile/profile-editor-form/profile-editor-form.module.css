@@ -1,0 +1,63 @@
+.title {
+  font-size: var(--font-heading-2);
+  font-weight: var(--font-weight-semibold);
+  line-height: 116%;
+  margin-bottom: 20px;
+}
+
+#profileEditorForm > form {
+  margin-bottom: 10px;
+}
+
+.group {
+  display: flex;
+  flex-direction: row;
+  padding: 8px 0 5px 0;
+  border-bottom: 1px solid #cecece;
+}
+
+.group > label {
+  min-width: 200px;
+}
+
+.wrapper {
+  position: relative;
+  flex: 1;
+  display: flex;
+}
+
+.wrapper > input {
+  width: 100%;
+  color: rgba(0, 0, 0, 0.5);
+}
+.wrapper > input:not(:disabled) {
+  color: var(--color-black);
+}
+
+.group:has(input:not(:disabled)) {
+  border-bottom: 1px solid var(--color-primary);
+}
+.group:has(input[aria-invalid="true"]) {
+  border-bottom: 1px solid var(--color-error);
+}
+
+.wrapper > input {
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    background-color: transparent;
+  }
+}
+
+.wrapper > svg {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+@media (width < 834px) {
+  .group {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,46 @@
+.accountInfo > p {
+  font-size: var(--font-heading-3);
+  line-height: 138%;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 30px;
+  color: var(--color-white);
+}
+
+.accountInfo > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.accountInfo > ul > li {
+  display: flex;
+  flex-direction: row;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.title {
+  font-size: var(--font-heading-2);
+  line-height: 117%;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.value {
+  color: var(--color-white);
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon > svg:hover {
+  color: var(--color-gray);
+}

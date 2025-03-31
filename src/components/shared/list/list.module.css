@@ -1,0 +1,18 @@
+.list {
+  background-color: var(--color-white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.list > h4 {
+  color: var(--color-black);
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-background);
+  font-weight: var(--font-weight-semibold);
+}
+
+.default {
+  padding-top: 20px;
+}

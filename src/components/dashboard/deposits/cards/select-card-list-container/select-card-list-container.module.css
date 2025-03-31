@@ -1,0 +1,13 @@
+.selectCardListContainer {
+  background-color: var(--color-background);
+  border-radius: var(--border-radius);
+  padding: 20px 30px;
+  color: var(--color-white);
+}
+
+.selectCardListContainer > h4 {
+  font-size: var(--font-heading-1);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 20px;
+}

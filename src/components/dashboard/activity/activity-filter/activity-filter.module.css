@@ -1,0 +1,66 @@
+.activityFilterContainer {
+  position: relative;
+}
+
+.activityFilter {
+  position: absolute;
+  top: 81px;
+  right: 0;
+  background-color: var(--color-tertiary);
+  width: 300px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  z-index: 5;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid var(--color-black);
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--font-heading-3);
+  font-weight: var(--font-weight-bold);
+}
+
+.delete {
+  color: var(--color-gray);
+  cursor: pointer;
+}
+.delete:hover {
+  color: var(--color-black);
+}
+
+.content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content > li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-gray);
+  cursor: pointer;
+}
+
+.selected {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-black);
+}
