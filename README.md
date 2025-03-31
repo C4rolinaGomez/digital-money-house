@@ -34,12 +34,12 @@ Este proyecto lo desarrollé como parte del desafío profesional de la certifica
 ```sh
 git clone https://github.com/tu-usuario/digital-money-house.git
 cd digital-money-house
-
+```
 ### 2️⃣ Instalar dependencias
 ```sh
 npm install
-
+```
 ### 3️⃣ Ejecución del Proyecto
 ```sh
 npm run dev
-
+```
