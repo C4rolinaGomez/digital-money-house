@@ -35,11 +35,11 @@ Este proyecto lo desarrollé como parte del desafío profesional de la certifica
 git clone https://github.com/tu-usuario/digital-money-house.git
 cd digital-money-house
 
-### 2 Instalar dependencias
+### 2️⃣ Instalar dependencias
 ```sh
 npm install
 
-### 2 Ejecución del Proyecto
+### 3️⃣ Ejecución del Proyecto
 ```sh
 npm run dev
 
