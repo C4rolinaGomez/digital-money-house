@@ -1,5 +1,6 @@
 import { HttpService } from "./http.service";
-const BASE_URL = "http://localhost:3000/api/proxy";
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL_DIGITALHOUSE || "";
+
 
 class HttpProxyService extends HttpService {
   constructor() {

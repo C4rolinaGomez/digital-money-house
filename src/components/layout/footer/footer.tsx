@@ -16,7 +16,7 @@ export const Footer = () => {
   return (
     <footer>
       <div className={`${styles.copyright} ${cssColor[footerStyle()]}`}>
-        © 2022 Digital Money House
+        © 2025 Digital Money House
       </div>
     </footer>
   );

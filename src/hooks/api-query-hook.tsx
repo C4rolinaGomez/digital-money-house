@@ -1,31 +1,52 @@
+"use client";
+
 import apiService from "@/services/api.service";
 import { PostAccountDepositsRequestType } from "@/types/account-deposits.types";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import  { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
+interface LoginVariables {
+  email: string;
+  password: string;
+}
+
 export const useLogin = () => {
-  const { mutate, isPending } = useMutation({
-    mutationFn: async (variables: { email: string; password: string }) => {
-      await apiService.loginInternal({
+  const router = useRouter();
+
+  return useMutation({
+    mutationFn: (variables: LoginVariables) => {
+      return apiService.login({
         email: variables.email,
         password: variables.password,
       });
     },
+    onSuccess: () => {
+      toast.success("¡Bienvenido!");
+      router.push("/dashboard");
+    },
+    onError: (error: any) => {
+      toast.error(error.message || "Error al iniciar sesión");
+    },
   });
-  return { mutate, isPending };
 };
 
+interface RegisterVariables {
+  dni: number;
+  email: string;
+  firstname: string;
+  lastname: string;
+  password: string;
+  phone: string;
+}
+
 export const useRegister = () => {
-  const { mutate, isPending } = useMutation({
-    mutationFn: async (variables: {
-      dni: number;
-      email: string;
-      firstname: string;
-      lastname: string;
-      password: string;
-      phone: string;
-    }) => {
-      await apiService.registerInternal({
+  const router = useRouter();
+
+  return useMutation({
+    // 1) mutationFn debe devolver la promesa
+    mutationFn: (variables: RegisterVariables) => {
+      return apiService.register({
         dni: variables.dni,
         email: variables.email,
         firstname: variables.firstname,
@@ -34,8 +55,15 @@ export const useRegister = () => {
         phone: variables.phone,
       });
     },
+   
+    onSuccess: () => {
+      router.push("/register/success");
+    },
+ 
+    onError: (error: any) => {
+      toast.error(error.message || "Error al registrarse");
+    },
   });
-  return { mutate, isPending };
 };
 
 export const useGetAccount = () => {
