@@ -95,12 +95,13 @@
   width: 100%;
 }
 
-@media (width < 834px) {
+@media (max-width: 834px) {
   .extralarge {
     font-size: var(--font-heading-3);
     padding: 25px;
   }
 }
+
 
 .icon {
   color: var(--color-black);

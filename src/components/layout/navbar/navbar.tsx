@@ -25,7 +25,7 @@ export const Navbar = ({ color = "primary", pathname }: NavbarProps) => {
           color={color === "primary" ? "background" : "primary"}
         />
       </Link>
-      <div>
+      <div className={styles.buttonContainer}>
         {pathname === "/" && (
           <>
             <Button type="link" color="background" href={"/login"}>

@@ -30,3 +30,25 @@
     width: 63px;
   }
 }
+
+.buttonContainer {
+  display: flex;
+  gap: 12px;
+}
+
+@media (max-width: 450px) {
+  .buttonContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .buttonContainer :global(a) {
+    width: 80%;
+    padding: 14px 0;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 10px;
+  }
+}

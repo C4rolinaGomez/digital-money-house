@@ -13,6 +13,9 @@ import { useEffect, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import { z } from "zod";
 import styles from "./login-form.module.css";
+import { Cookie } from "@/interfaces/cookie";
+import { setCookie, deleteCookie, getCookie } from 'cookies-next';
+
 
 export const LoginForm = () => {
   const { mutate, isPending } = useLogin();
@@ -46,7 +49,23 @@ export const LoginForm = () => {
         { email, password },
         {
           onSuccess: () => {
+
+            // Establecer cookie al hacer login exitoso
+            setCookie('session', 'true', {
+              path: '/', // importante para que esté disponible en todas las rutas
+              maxAge: 60 * 60, // 1 hora en segundos
+            });
             router.push("/dashboard");
+
+            //seteo de la cookie
+
+            /*  // Una hora de duración por defecto
+              const setCookieClient = ({ name, value, hours }: Cookie) => {
+                setCookie(name, value, {
+                  expires: new Date(Date.now() + 1000 * 60 * 60 * (hours || 1)),
+                });
+              }*/
+
           },
           onError: (e) => {
             if (e instanceof NotFoundError) {

@@ -7,18 +7,25 @@ export const config = {
 };
 
 export async function middleware(request: NextRequest) {
-  try {
-    const cookieStore = cookies();
-    const sessionId = cookieStore.get("SESSION_ID")?.value;
-    if (!sessionId)
-      return NextResponse.redirect(new URL("/login", request.url));
-    const accessToken = await getAccessToken(sessionId);
-    if (!accessToken)
-      return NextResponse.redirect(new URL("/login", request.url));
-    return setAuthHeaders(request, accessToken);
-  } catch (e) {
-    return NextResponse.redirect(new URL("/login", request.url));
+  /* try {
+     const cookieStore = cookies();
+     const sessionId = cookieStore.get("SESSION_ID")?.value;
+     if (!sessionId)
+       return NextResponse.redirect(new URL("/login", request.url));
+     const accessToken = await getAccessToken(sessionId);
+     if (!accessToken)
+       return NextResponse.redirect(new URL("/login", request.url));
+     return setAuthHeaders(request, accessToken);
+   } catch (e) {
+     return NextResponse.redirect(new URL("/login", request.url));
+   }*/
+  const session = request.cookies.get('session');
+
+  if (request.nextUrl.pathname === '/login' && session) {
+    return NextResponse.redirect(new URL('/dashboard', request.url));
   }
+
+  return NextResponse.next();
 }
 
 const getAccessToken = async (sessionId: string): Promise<string> => {
